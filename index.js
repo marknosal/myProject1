@@ -67,8 +67,6 @@ function thinBorder (event) {
 }
 //DOM changes when checkbox is clicked
 function checkBox(event) {
-  console.log(event.target.checked)
-  console.log(event.target.previousSibling)
   if(event.target.checked) {
     const gameBorder = event.target.parentNode
     const message = event.target.previousSibling

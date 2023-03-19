@@ -36,9 +36,9 @@
       "photo": "https://upload.wikimedia.org/wikipedia/en/8/85/Kingdom_Hearts.jpg"
     },
     {
-      "title": "The Witcher 3: Wild Hunt",
-      "developer": "CD Projekt Red",
-      "genre": "Action RPG",
+      "title": "The Witcher 3",
+      "developer": "CD Projekt red",
+      "genre": "Action",
       "photo": "https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg",
       "id": 6
     }
