@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Phase 1 Project</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script defer type="text/javascript" src="./index.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>MARK'S FAVORITE GAMES!</h1>
+            <img
+                src='./img/Header.PNG'
+                alt='Title image should go here.'
+                id="headerImage"
+            >
+        </header>
+        <div id="formContainer">
+            <br>
+            <form class="addGameForm">
+              <input
+                type="text"
+                name="name"
+                value=""
+                placeholder="Name of Game"
+                class="input-text"
+              />
+              <input
+                type="text"
+                name="Developer"
+                value=""
+                placeholder="Developer"
+                class="input-text"
+              />
+              <br>
+              <input
+                type="text"
+                name="genre"
+                value=""
+                placeholder="Genre"
+                class="input-text"
+              />
+              <input
+                type="text"
+                name="image"
+                value=""
+                placeholder="URL to the game's logo"
+                class="input-text"
+              />
+              <br>
+              <br>
+              <input
+                type="submit"
+                name="submit"
+                value="Add Game"
+                class="submit"
+              />
+              <br>
+              <br>
+            </form>
+        </div>
+        <p id="pButton">
+            Add a game to your list =>
+            <button id="newGameButton">New Game!</button>
+        </p>
+        <div id="gameList"></div>
+    </body>
+</html>
