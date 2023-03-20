@@ -80,6 +80,7 @@ function checkBox(event) {
     message.style = 'color: black'
     message.textContent = 'Game Unfinished'
   }
+  postCompletion(event)
 }
 // submits newGameForm
 function submitNewGameForm(event) {
@@ -108,3 +109,5 @@ function submitNewGameForm(event) {
   //resets addGameForm for a new game post
   document.querySelector('form.addGameForm').reset()
 }
+
+function postCompletion(event) {}
