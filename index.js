@@ -110,4 +110,21 @@ function submitNewGameForm(event) {
   document.querySelector('form.addGameForm').reset()
 }
 
-function postCompletion(event) {}
+/*posts checkbox if completed or not to server*/
+function postCompletion(event) {
+  const completion = event
+  const gameNumber = event.target.id.slice(-1)
+  const patchObj = {
+    method: 'PATCH',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
+    body: JSON.stringify({
+      completion: 'A'
+    })
+  }
+  fetch(`http://localhost:3000/games/${gameNumber}`, patchObj)
+    .then(response => response.json())
+    .then(returnData => console.log(returnData))
+}

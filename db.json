@@ -40,7 +40,8 @@
       "developer": "CD Projekt red",
       "genre": "Action",
       "photo": "https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg",
-      "id": 6
+      "id": 6,
+      "completion": "A"
     }
   ]
 }
