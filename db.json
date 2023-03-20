@@ -19,7 +19,8 @@
       "title": "The Talos Principle",
       "developer": "Croteam",
       "genre": "Puzzle",
-      "photo": "https://upload.wikimedia.org/wikipedia/en/a/ac/The_Talos_Principle.jpg"
+      "photo": "https://upload.wikimedia.org/wikipedia/en/a/ac/The_Talos_Principle.jpg",
+      "completion": false
     },
     {
       "id": 4,

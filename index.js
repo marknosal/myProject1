@@ -112,7 +112,7 @@ function submitNewGameForm(event) {
 
 /*posts checkbox if completed or not to server*/
 function postCompletion(event) {
-  const completion = event
+  console.log(event.target.checked)
   const gameNumber = event.target.id.slice(-1)
   const patchObj = {
     method: 'PATCH',
@@ -121,7 +121,7 @@ function postCompletion(event) {
       'Accept': 'application/json',
     },
     body: JSON.stringify({
-      completion: 'A'
+      'completion': event.target.checked
     })
   }
   fetch(`http://localhost:3000/games/${gameNumber}`, patchObj)
