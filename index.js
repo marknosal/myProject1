@@ -55,6 +55,7 @@ function createGame(game) {
   completeBox.type = 'checkbox'
   completeBox.id = `checkbox${game.id}`
   completeBox.addEventListener('click', checkBox)
+  initialCompletion(game)
   newGame.appendChild(completeBox)
 }
 /*thickens border when Mouse Over*/
@@ -80,7 +81,7 @@ function checkBox(event) {
     message.style = 'color: black'
     message.textContent = 'Game Unfinished'
   }
-  postCompletion(event)
+  patchCompletion(event)
 }
 // submits newGameForm
 function submitNewGameForm(event) {
@@ -111,8 +112,7 @@ function submitNewGameForm(event) {
 }
 
 /*posts checkbox if completed or not to server*/
-function postCompletion(event) {
-  console.log(event.target.checked)
+function patchCompletion(event) {
   const gameNumber = event.target.id.slice(-1)
   const patchObj = {
     method: 'PATCH',
@@ -126,5 +126,31 @@ function postCompletion(event) {
   }
   fetch(`http://localhost:3000/games/${gameNumber}`, patchObj)
     .then(response => response.json())
-    .then(returnData => console.log(returnData))
+    .then(returnData => console.log(returnData.completion))
+}
+
+// function completionOnDom(returnData) {
+//   console.log(returnData)
+//   if (returnData.completion === true) {
+//     console.log('true')
+//   } else if (returnData.completion === false) {
+//     console.log('false')
+//   }
+// }
+
+function initialCompletion(game) {
+  if(game.completion === true) {
+    const gameBorder = document.getElementById(`game${game.id}`)
+    const message = gameBorder.lastChild
+    const checkbox = document.getElementById(`input#checkbox${game.id}`)
+    gameBorder.style = 'border-color: green; border-width: 5px;'
+    message.style = 'color: green'
+    message.textContent = 'Game Complete'
+  } else if (game.completion === false) {
+    const gameBorder = document.getElementById(`game${game.id}`)
+    const message = gameBorder.lastChild
+    gameBorder.style = 'border-color: black; border-width: 1px;'
+    message.style = 'color: black'
+    message.textContent = 'Game Unfinished'
+  }
 }

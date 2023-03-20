@@ -19,30 +19,23 @@
       "title": "The Talos Principle",
       "developer": "Croteam",
       "genre": "Puzzle",
-      "photo": "https://upload.wikimedia.org/wikipedia/en/a/ac/The_Talos_Principle.jpg",
-      "completion": false
+      "photo": "https://upload.wikimedia.org/wikipedia/en/a/ac/The_Talos_Principle.jpg"
     },
     {
       "id": 4,
       "title": "Death Stranding",
       "developer": "Kojima Productions",
       "genre": "Action",
-      "photo": "https://upload.wikimedia.org/wikipedia/en/2/22/Death_Stranding.jpg"
+      "photo": "https://upload.wikimedia.org/wikipedia/en/2/22/Death_Stranding.jpg",
+      "completion": true
     },
     {
       "id": 5,
       "title": "Kingdom Hearts",
       "developer": "Square",
       "genre": "Action RPG",
-      "photo": "https://upload.wikimedia.org/wikipedia/en/8/85/Kingdom_Hearts.jpg"
-    },
-    {
-      "title": "The Witcher 3",
-      "developer": "CD Projekt red",
-      "genre": "Action",
-      "photo": "https://upload.wikimedia.org/wikipedia/en/0/0c/Witcher_3_cover_art.jpg",
-      "id": 6,
-      "completion": "A"
+      "photo": "https://upload.wikimedia.org/wikipedia/en/8/85/Kingdom_Hearts.jpg",
+      "completion": true
     }
   ]
 }
